@@ -60,7 +60,7 @@
 <meta property="og:description" content="Daily notes">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.imgur.com&#x2F;vDAobu1.png">
-<meta property="og:updated_time" content="2021-07-26T08:33:59.356Z">
+<meta property="og:updated_time" content="2021-07-26T14:59:08.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.imgur.com&#x2F;vDAobu1.png">
 
@@ -238,7 +238,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-26 10:33:59" itemprop="dateModified" datetime="2021-07-26T10:33:59+02:00">2021-07-26</time>
+                <time title="Modified: 2021-07-26 16:59:08" itemprop="dateModified" datetime="2021-07-26T16:59:08+02:00">2021-07-26</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -373,10 +373,23 @@
 <h3 id="26-07"><a href="#26-07" class="headerlink" title="26/07"></a>26/07</h3><ul>
 <li><p>从伽利略到牛顿，再到达尔文，再到现在的科学家，他们的研究一次又一次地削弱了教条主义的禁锢。</p>
 <blockquote>
-<p>教条主义只是在寻找合适的 constraints 限制manifold上的information flow.</p>
+<p>教条主义只是在寻找合适的 constraints 限制manifold上的information flow.教条主义无罪，只是迫于当时条件，只能给出boundary很不适合的constrants.</p>
 </blockquote>
 </li>
-<li><p><img src="https://i.imgur.com/vDAobu1.png" alt="Dyna算法框架"></p>
+<li><p>Dyna Architecture</p>
+<blockquote>
+<p><img src="https://i.imgur.com/vDAobu1.png" alt="Dyna算法框架"><br><a href="RL_mn_01.png">RL Dyna_me</a></p>
+</blockquote>
+</li>
+<li><p>在模仿学习中我们试图从获取的大量的数据（输入观测o，输出动作a）中进行学习，最终得到一个策略网络：这样的方法由于<u>实际数据和训练数据分布不一致往往很难取得效果</u>。然后我们尝试使用<strong>动态规划（值迭代、策略迭代）</strong>、<strong>蒙特卡洛(MC)</strong>以及<strong>时间差分(TD)</strong>三种方法来解决马尔可夫决策过程描述的强化学习任务。其中动态规划虽然只bootstrapping一次但需要知道环境转移模型，而蒙特卡洛虽然无需知道环境转移模型但每次都要一个完整的episode，因此结合了两者的时间差分就显得非常有效。我们在DQN中进一步将时间差分中的Q-learning和深度学习结合构建价值网络，训练了一个非常有趣的能打pong游戏的agent。随后我们从直接最大化回报函数的角度，学习了策略梯度方法，它将策略网络和价值网络相结合，发展出了著名的Actor Critic算法。</p>
+</li>
+<li><p>基于价值的强化学习模型和基于策略的强化学习模型都不是基于模型的，它们从价值函数，策略函数中直接去学习，不用学习环境的状态转化概率模型，即在状态s下采取动作a,转到下一个状态s′的概率$P^a_{ss′}$。而基于模型的强化学习则会尝试从环境的模型去学习，一般是下面两个相互独立的模型：一个是<strong>状态转化预测模型</strong>，输入当前状态s和动作a，预测下一个状态s′。另一个是<strong>奖励预测模型</strong>，输入当前状态s和动作a，预测环境的奖励r。从上面的描述我们可以看出基于模型的强化学习和不基于模型的强化学习的主要区别：即<strong>基于模型的强化学习是从模型中学习</strong>，而<strong>不基于模型的强化学习是从和环境交互的经历去学习</strong>。<strong>基于模型的强化学习一般不单独使用</strong>，而是和不基于模型的强化学习结合起来，因此使用Dyna算法框架是常用的做法。</p>
+</li>
+<li><p>Learning is a pattern formation process of information.</p>
+<ul>
+<li>hierarchies of the information</li>
+<li>structures of the information flow.</li>
+</ul>
 </li>
 </ul>
 
