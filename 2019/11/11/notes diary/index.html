@@ -61,7 +61,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;i.imgur.com&#x2F;vDAobu1.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;luoji-neuron.tk&#x2F;2019&#x2F;11&#x2F;11&#x2F;notes%20diary&#x2F;RL_mn_01.png">
-<meta property="og:updated_time" content="2021-08-06T17:42:41.872Z">
+<meta property="og:updated_time" content="2021-08-06T18:55:12.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;i.imgur.com&#x2F;vDAobu1.png">
 
@@ -239,7 +239,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-08-06 19:42:41" itemprop="dateModified" datetime="2021-08-06T19:42:41+02:00">2021-08-06</time>
+                <time title="Modified: 2021-08-06 20:55:12" itemprop="dateModified" datetime="2021-08-06T20:55:12+02:00">2021-08-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -565,14 +565,39 @@
 <li>因果涌现理论就是在说某些特殊系统的宏观层面是有可能自发产生出超越微观动力学的新的因果箭头的。</li>
 </ul>
 </li>
+<li><p>Lynn, Christopher W., and Danielle S. Bassett. 2019. “The Physics of Brain Network Structure, Function and Control.” Nature Reviews Physics 1 (5): 318–32. <a href="https://doi.org/10.1038/s42254-019-0040-8" target="_blank" rel="noopener">link</a>.</p>
+<ul>
+<li><p><a href="https://mp.weixin.qq.com/s?__biz=MzIzMjQyNzQ5MA==&mid=2247530155&idx=1&sn=63d065095bd06eb95ccade24ada674b8&chksm=e8972c26dfe0a5305dc1fd32e2524d9c9e7479776b8a200ac506fdccfbe58b3e9ae4482b6196&scene=21#wechat_redirect" target="_blank" rel="noopener">前沿综述：大脑结构网络、功能网络和网络控制中的物理学</a></p>
+</li>
 <li><p>在网络的视角中，大脑中的<del>基本物理单元（神经元）</del> 被看作节点，<del>单元之间的连接（轴突）</del> 被看作连边。</p>
 <ul>
 <li>信息处理单元被看作节点，</li>
 </ul>
 </li>
-<li><p>这样的高聚合度和短平均距离之间的权衡，体现了网络的小世界和具有中心节点的特性。这可能与促进脑内信息的拆分和整合有关，从而减少处理外来信息的最小计算步骤[4-6]。</p>
+<li><p><strong>高聚合度和短平均距离之间的权衡</strong>，体现了网络的小世界和具有中心节点的特性。这可能与促进脑内信息的拆分和整合有关，从而减少处理外来信息的最小计算步骤[4-6]。</p>
+</li>
+<li><p>脑物理网络定义的连通性是指物理上可测量的神经连接（如神经元之间的突触和脑区之间的白质束），然而功能网络定义的连通性是基于两个单元之间动态过程是否相似[18](<a href="https://doi.org/10.1038/nrn2575" target="_blank" rel="noopener">paper link</a> Cited by 9441)。</p>
+</li>
+<li><p>但想要将结构与功能联系起来并不容易，他们之间多呈现非线性关系，这也是学界聚焦的一个重要课题[19, 20].</p>
+<ul>
+<li>Deco, Gustavo, Giulio Tononi, Melanie Boly, and Morten L. Kringelbach. 2015. “Rethinking Segregation and Integration: Contributions of Whole-Brain Modelling.” Nature Reviews Neuroscience 16 (7): 430–39. <a href="https://doi.org/10.1038/nrn3963" target="_blank" rel="noopener">link</a>.</li>
+<li></li>
+</ul>
 </li>
 <li><p>Human brain functional networks are embedded in anatomical space and have <strong>topological properties</strong>—<u>small-worldness, modularity, fat-tailed degree distributions</u>—that are comparable to many other complex networks.</p>
+<blockquote>
+<p>Although a sophisticated set of measures is available to describe the topology of brain networks, the selection pressures that drive their formation remain largely unknown. Here we consider generative models for the probability of a functional connection (an edge) between two cortical regions (nodes) separated by some Euclidean distance in anatomical space. In particular, we propose a model in which <strong>the embedded topology of brain networks emerges from two competing factors</strong>: a distance penalty based on the cost of maintaining long-range connections; and a topological term that favors links between regions sharing similar input.</p>
+</blockquote>
+</li>
+<li><p>顺用统计力学里的洞察，对于脑网络，人们也是遵循先对<strong>单个神经元动态过程进行模拟</strong>[21-23]，然后到不同脑区的<strong>平均场神经质量模型</strong>的构建[24, 25]，最后尝试实现全脑的网络模拟[15, 26]。文中将神经动态过程模型分成两类：<strong>人工模型（Artificial Models）</strong> 和 <strong>生物物理模型（Biophysical Models</strong> .</p>
+</li>
+<li><p>类伊辛模型也被用来解释神经元系宗中的临界或雪崩状行为[28] (<a href="https://link.aps.org/doi/10.1103/PhysRevE.92.052804" target="_blank" rel="noopener">link</a>).</p>
+</li>
+<li><p>为了得以解释从单个神经元中涌现出的大尺度神经行为，研究者们开始在Wilson-Cowan的群体动力学模型基础上[25]，发展叫做神经质量模型（Neural Mass Models）的，大尺度神经活动的平均场描述。</p>
+</li>
+<li><p>在控制理论（Control Theory）中，追求的目标是如何推动一个系统到理想的状态中去[44, 45]。</p>
+</li>
+</ul>
 </li>
 </ul>
 
